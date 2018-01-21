@@ -1,5 +1,5 @@
 # StylisControlAudiovisualTreatment
-Audio treatment and visual effects controled by a Wacom tablet in Pure Data using Gem
+Audio treatment and visual effects controlled by a Wacom tablet in Pure Data using Gem
 
 This is the fisrt version, it is only a test for the moment. 
 
