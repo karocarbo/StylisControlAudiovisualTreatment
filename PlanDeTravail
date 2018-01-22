@@ -37,7 +37,7 @@ Gestion des données audio : La source audio proviendra soit d'un instrument à 
 Ensuite, le signal audio sera dirigé vers une gate où la sélection des effets audio sera faite. 
 Les effets audio seront donc en parallèle. 
 Le signal sera ensuite dirigé vers la sortie audio ou vers le système d'enregistrement qui, celui-ci, permettra l'exportation du fichier audio. 
-Le signal audio est représenté avec les connexions en blanc dans le schéma ci-dessous.
+Le signal audio est représenté avec les connexions en blanc dans le schéma.
 
 Gestions des données OSC : Les données enregistrés par la tablette seront dirigées vers les contrôles des effets audio et des effets visuels. 
 Les données de la tablette sont : la position x, y et z (la pression du crayon), de la pointe et de l'efface du crayon, 
