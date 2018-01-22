@@ -169,7 +169,7 @@
 #X obj 170 810 sel 0;
 #X msg 170 832 0;
 #X floatatom 199 216 5 0 0 0 - - -, f 5;
-#N canvas 66 71 624 1087 plan 0;
+#N canvas 52 63 624 1087 plan 0;
 #X text 59 91 1.2 DESCRIPTION;
 #X text 61 215 1.3 ANALYSE DES BESOINS;
 #X text 64 411 1.4 ACQUISITION DES CONNAISSANCES;
@@ -240,7 +240,7 @@ qui réagissent en fonction du son;
 #X text 65 681 Traitement visuel : Variations d'effets visuels (formes
 \, couleurs \, etc);
 #X text 61 31 1.1 ÉNONCÉ;
-#X text 64 633 Traitements sonores : Différents effets audios comme
+#X text 63 633 Traitements sonores : Différents effets audios comme
 la distortion \, la réverbération \, le delai \, les filtres et la
 granulation.;
 #X obj 424 1292 Effets visuels;
@@ -294,7 +294,7 @@ du crayon sur la tablette. J'ai aussi ajouté un petit système de
 sélection de couleur pour le cercle. La semaine prochaine consistera
 à lire davantage sur la librairie gem et j'essayerai de créer des
 effets visuels plus intéressant.;
-#X text 61 1653 SEMAINE 2;
+#X text 60 1653 SEMAINE 2;
 #X text 59 1510 Le logiciel Pure Data est l'environnement utilisé
 pour ce projet. J'ai besoin d'apprendre la librairie Gem qui s'occupera
 de créer une interface visuelle. L'application OSCulator est utilisée
