@@ -1,0 +1,70 @@
+1.1 ÉNONCÉ
+Traitements audiovisuels par le crayon / Stylist Control Audiovisual Treatment
+
+
+1.2 DESCRIPTION
+Le logiciel permettra de contrôler des effets audio à l'aide d'une tablette graphique. 
+Une interface visuelle en réaction avec les contrôles des effets permettra de reconnaître et de visualiser l'effet appliqué en image. 
+Il sera possible d'importer des sons par des fichiers audio ou de les enregistrer à même le programme.
+
+
+1.3 ANALYSE DES BESOINS
+Matériel : Une tablette graphique
+Contrôles de la tablette : Une communication OSC qui fera le lien entre la tablette et le logiciel utilisé
+Contrôles graphique : Une interface permettant des effets visuels
+Contrôles audio : Une interface permettant les traitements sonores
+Enregistrement : Un système de stockage des données pour l'enregistrement, l'importation et l'exportaiton des sons
+
+
+1.4 ACQUISITION DES CONNAISSANCES
+Recherche sur la communication des logiciels en OSC 
+-> http://opensoundcontrol.org/introduction-osc 
+-> https://osculator.net/
+Recherche sur les différents effets audio qui seraient intéressant à ajouter au logiciel
+Recherche sur les différents effets visuels de base qui réagissent en fonction du son
+
+
+1.5 MODÈLE
+Signal audio : Un fichier audio ou un instrument
+Tablette graphique : A comme fonction de contrôler les traitements audio et visuels
+Traitements sonores : Différents effets audios comme la distortion, la réverbération, le delai, les filtres et la granulation.
+Traitement visuel : Variations d'effets visuels (formes, couleurs, etc)
+Système d'enregistrement : Gestion du stockage des données
+
+
+1.6 MÉTHODES
+Gestion des données audio : La source audio proviendra soit d'un instrument à l'entrée ou d'un son importé. 
+Ensuite, le signal audio sera dirigé vers une gate où la sélection des effets audio sera faite. 
+Les effets audio seront donc en parallèle. 
+Le signal sera ensuite dirigé vers la sortie audio ou vers le système d'enregistrement qui, celui-ci, permettra l'exportation du fichier audio. 
+Le signal audio est représenté avec les connexions en blanc dans le schéma ci-dessous.
+
+Gestions des données OSC : Les données enregistrés par la tablette seront dirigées vers les contrôles des effets audio et des effets visuels. 
+Les données de la tablette sont : la position x, y et z (la pression du crayon), de la pointe et de l'efface du crayon, 
+quatre boutons, une roulette et un bouton sur le crayon. Les envois des données de la tablette sont indiqués en noir.
+
+Effets audio (traitements sonores) : Pour la réalisation des traitements sonores, je mettrai en oeuvres les connaissances acquises 
+dans le cours Analyse et traitements sonores en temps réel 1 en élaborant un peu plus sur le traitement.
+
+Effets visuels : Apprentissage des différentes techniques de manipulations visuelles (couleurs, formes, grosseur, espace, etc.
+
+
+1.7 IMPLÉMENTATION
+Le logiciel Pure Data est l'environnement utilisé pour ce projet. 
+J'ai besoin d'apprendre la librairie Gem qui s'occupera de créer une interface visuelle. 
+L'application OSCulator est utilisée pour transformer les données de la tablette en signal OSC et les envois vers Pure Data. 
+La librairie Peach sert à faire le routing des informations reçues afin de les séparer.
+
+
+1.8 TEST ET MAINTENANCE
+SEMAINE 2
+Gestion des données OSC : Plusieurs tests de compatibilité ont été fait avec la tablette Wacom intuos cth 490 et après les réponses 
+des développeurs de OSCulator, il en convient que des mises à jour devront être faites pour que la tablette soit compatible. 
+Après maintes recherches, je me suis résolue à acheter une tablette Wacom usagée compatible avec OSCulator puisqu'il fallait que 
+je commence à faire quelques tests avec une tablette fonctionnelle. Je me suis questionnée sur les moyens de gérer les informations 
+de la tablette dans Pd et je suis tombée sur la chaine de Rafael Hernandez où il explique la librairie Peach : https://www.youtube.com/watch?v=rxHIJx-O3iU.
+
+Effets visuels : J’ai fait quelques lectures sur la librairie Gem et je suis arrivée à programmer un cercle qui bouge en fonction de 
+la position du crayon et qui grossit selon la pression du crayon sur la tablette. 
+J'ai aussi ajouté un petit système de sélection de couleur pour le cercle. 
+La semaine prochaine consistera à lire davantage sur la librairie gem et j'essayerai de créer des effets visuels plus intéressant.
