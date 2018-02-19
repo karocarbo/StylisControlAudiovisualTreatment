@@ -13,13 +13,13 @@ Matériel : Une tablette graphique
 Contrôles de la tablette : Une communication OSC qui fera le lien entre la tablette et le logiciel utilisé
 Contrôles graphique : Une interface permettant des effets visuels
 Contrôles audio : Une interface permettant les traitements sonores
-Enregistrement : Un système de stockage des données pour l'enregistrement, l'importation et l'exportaiton des sons
+Enregistrement : Un système de stockage des données pour l'enregistrement, l'importation et l'exportation des sons
 
 
 1.4 ACQUISITION DES CONNAISSANCES
 Recherche sur la communication des logiciels en OSC 
--> http://opensoundcontrol.org/introduction-osc 
--> https://osculator.net/
+-> http://opensoundcontrol.org/introduction-osc [done]
+-> https://osculator.net/ [done]
 Recherche sur les différents effets audio qui seraient intéressant à ajouter au logiciel
 Recherche sur les différents effets visuels de base qui réagissent en fonction du son
 
@@ -27,19 +27,19 @@ Recherche sur les différents effets visuels de base qui réagissent en fonction
 1.5 MODÈLE
 Signal audio : Un fichier audio ou un instrument
 Tablette graphique : A comme fonction de contrôler les traitements audio et visuels
-Traitements sonores : Différents effets audio comme la distortion, la réverbération, le délai, les filtres et la granulation.
-Traitement visuel : Variations d'effets visuels (formes, couleurs, etc)
-Système d'enregistrement : Gestion du stockage des données
+Traitements sonores : Différents effets audio comme la distorsion, la réverbération, le délai, le tremolo, les filtres et la granulation.
+Traitement visuel : Variations d'effets visuels (formes, couleurs, etc) en lien avec les paramètres des effets
+Système d'enregistrement : Gestion du stockage des données [à faire]
 
 
 1.6 MÉTHODES
-Gestion des données audio : La source audio proviendra soit d'un instrument à l'entrée ou d'un son importé. 
+Gestion des données audio : La source audio proviendra soit d'un instrument à l'entrée, d’un son importé, d’un synthétiseur contrôlable par la table ou un clavier midi. 
 Ensuite, le signal audio sera dirigé vers une gate où la sélection des effets audio sera faite. 
-Les effets audio seront donc en parallèle. 
+Les effets audio seront donc en parallèle [en série pour l’instant, reste à voir]. 
 Le signal sera ensuite dirigé vers la sortie audio ou vers le système d'enregistrement qui, celui-ci, permettra l'exportation du fichier audio. 
 Le signal audio est représenté avec les connexions en blanc dans le schéma.
 
-Gestions des données OSC : Les données enregistrés par la tablette seront dirigées vers les contrôles des effets audio et des effets visuels. 
+Gestions des données OSC : Les données enregistrées par la tablette seront dirigées vers les contrôles des effets audio et des effets visuels. 
 Les données de la tablette sont : la position x, y et z (la pression du crayon), de la pointe et de l'efface du crayon, 
 quatre boutons, une roulette et un bouton sur le crayon. Les envois des données de la tablette sont indiqués en noir.
 
@@ -51,7 +51,7 @@ Effets visuels : Apprentissage des différentes techniques de manipulations visu
 
 1.7 IMPLÉMENTATION
 Le logiciel Pure Data est l'environnement utilisé pour ce projet. 
-J'ai besoin d'apprendre la librairie Gem qui s'occupera de créer une interface visuelle. 
+J'ai besoin d'apprendre la librairie Gem qui s'occupera de créer une interface visuelle. [done] 
 L'application OSCulator est utilisée pour transformer les données de la tablette en signal OSC et les envois vers Pure Data. 
 La librairie Peach sert à faire le routing des informations reçues afin de les séparer.
 
@@ -68,3 +68,19 @@ Effets visuels : J’ai fait quelques lectures sur la librairie Gem et je suis a
 la position du crayon et qui grossit selon la pression du crayon sur la tablette. 
 J'ai aussi ajouté un petit système de sélection de couleur pour le cercle. 
 La semaine prochaine consistera à lire davantage sur la librairie gem et j'essayerai de créer des effets visuels plus intéressant.
+
+SEMAINE 7
+Ce qui est fait:
+J’ai intégré un synthétiseur monophonique avec quatre oscillateurs qui se contrôle avec la tablette 
+et un synthétiseur polyphonique à huit voix et quatre oscillateurs qui peut se contrôler avec un clavier midi externe.
+J’ai mis en place le système qui importe les sons et qui les fait jouer.
+J’ai implanté trois effets audio : une réverbération qui, pour le moment, vient de la librairie freeverb;
+une distorsion; et un vibrato. Le tout est en stéréo.
+J’ai passé les dernières semaines à apprendre la librairie Gem. 
+Pour se qui est de l’interaction en les éléments visuels et audio, j’ai ajouter : un cube qui grossit selon la grosseur le la room de la réverbération;
+une sphère en mouvement qui se multiplie selon l’intensité de la distorsion et qui devient plus ou moins apparent selon la balance wet et dry.
+
+À faire :
+Penser à un système visuel qui permettra de contrôler les effets audio de façon clair sans venir interrompre les projections.
+Continuer à intégrer d’autres effets audio.
+Implanter un système d’enregistrement de son et d’exportation de son.
