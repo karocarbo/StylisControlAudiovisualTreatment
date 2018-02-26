@@ -1,5 +1,5 @@
 #N canvas 617 23 379 571 10;
-#N canvas 271 197 1091 628 gemwin 1;
+#N canvas 672 297 1091 794 gemwin 0;
 #X obj 230 337 gemwin;
 #X msg 293 142 dimen 500 500;
 #X msg 330 100 dimen 1920 1155;
@@ -58,6 +58,18 @@
 #X msg 402 49 dimen 1600 1190;
 #X floatatom 946 77 5 0 0 0 - - -, f 5;
 #X obj 849 304 metro 500;
+#X msg 286 545 fog 0.15748;
+#X obj 270 414 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2000 1;
+#X obj 267 434 t b f;
+#X msg 304 479 set fog \$1;
+#X text 564 534 fogmode 0/1/2/3 : set the fog mode (OFF/LINEAR/EXP/EXP^2)
+;
+#X msg 491 590 fogmode 3;
+#X obj 494 508 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
+-1 -1 3;
+#X msg 487 553 set fogmode \$1;
+#X obj 490 530 t b f;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 1 0;
@@ -124,6 +136,16 @@
 #X connect 57 0 42 0;
 #X connect 57 0 43 0;
 #X connect 57 0 44 0;
+#X connect 58 0 0 0;
+#X connect 59 0 60 0;
+#X connect 60 0 58 0;
+#X connect 60 1 61 0;
+#X connect 61 0 58 0;
+#X connect 63 0 0 0;
+#X connect 64 0 66 0;
+#X connect 65 0 63 0;
+#X connect 66 0 63 0;
+#X connect 66 1 65 0;
 #X restore 116 505 pd gemwin;
 #X obj 116 484 pack f f f;
 #X obj 125 450 t b f;
@@ -140,7 +162,7 @@
 #X text 134 124 open window;
 #X text 132 191 small rect;
 #X obj 115 215 tgl 15 0 light empty empty 17 7 0 10 -1 -262144 -262144
-0 1;
+1 1;
 #X text 133 214 light on / off;
 #X obj 116 261 vradio 15 1 0 4 bgcolsel empty empty 0 -8 0 10 -1 -262144
 -262144 3;
@@ -148,11 +170,11 @@
 #X text 135 276 white;
 #X text 135 261 black;
 #X obj 138 336 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -26960
--204786 -204786 1500 0;
+-204786 -204786 0 0;
 #X obj 160 336 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -14080
--262144 -262144 2000 0;
+-262144 -262144 0 0;
 #X obj 116 336 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -254797
--262144 -262144 1500 0;
+-262144 -262144 0 0;
 #X text 134 290 random color;
 #X text 113 242 BACKGROUND COLOR;
 #X obj 102 102 cnv 15 146 15 empty empty GEM_INIT 40 9 0 14 -1 -262144
