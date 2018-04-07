@@ -1,4 +1,4 @@
-#N canvas 813 237 818 937 10;
+#N canvas 1080 181 818 937 10;
 #X obj 473 820 +~;
 #X obj 618 109 - 1;
 #X obj 618 130 * -1;
@@ -24,18 +24,18 @@
 #X obj 102 102 cnv 15 146 86 empty empty TREMOLO 34 12 0 14 -257983
 -66577 0;
 #X obj 111 155 hsl 128 15 0 1 0 0 empty amount_init Amount 50 8 0 10
--97166 -1 -262144 10605 1;
+-97166 -1 -262144 8800 1;
 #X obj 111 132 hsl 128 15 0 15 0 0 empty gain_disto_init Speed 50 8
-0 10 -97166 -1 -262144 8260 1;
-#X obj 226 109 tgl 15 0 empty empty empty 50 8 0 10 -97166 -1 -262144
-0 1;
+0 10 -97166 -1 -262144 5100 1;
+#X obj 226 109 tgl 15 0 empty empty empty 50 8 0 10 -97166 -262144
+-262144 0 1;
 #X obj 29 19 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X text 50 19 Tremolo ON / OFF;
 #X obj 29 39 s tremonoff;
 #X floatatom 108 173 5 0 0 0 - - -, f 5;
 #X text 129 172 %;
-#X obj 13 129 s tremspeed;
+#X obj 14 119 s tremspeed;
 #X obj 613 537 r tremspeed;
 #X obj 162 821 +~;
 #X obj 162 378 inlet~;
@@ -53,12 +53,10 @@
 #X floatatom 672 620 5 0 0 0 - - -, f 5;
 #X obj 12 153 s tremamount;
 #X obj 29 61 r tremonoff;
-#X obj 214 37 r penx_trem_wetdry;
 #X obj 289 62 r peny_trem_speed;
 #X obj 289 84 * 15;
 #X obj 286 194 s tremonoff_visual;
-#X obj 214 59 spigot;
-#X obj 289 106 spigot;
+#X obj 274 37 r penx_trem_amount;
 #X connect 0 0 6 0;
 #X connect 1 0 2 0;
 #X connect 2 0 9 1;
@@ -94,9 +92,7 @@
 #X connect 22 0 46 0;
 #X connect 23 0 30 0;
 #X connect 24 0 11 0;
-#X connect 24 0 51 0;
-#X connect 24 0 52 1;
-#X connect 24 0 53 1;
+#X connect 24 0 50 0;
 #X connect 25 0 27 0;
 #X connect 31 0 20 0;
 #X connect 31 0 43 0;
@@ -113,9 +109,7 @@
 #X connect 42 0 41 0;
 #X connect 44 0 45 0;
 #X connect 47 0 24 0;
-#X connect 48 0 52 0;
-#X connect 49 0 50 0;
-#X connect 50 0 53 0;
-#X connect 52 0 22 0;
-#X connect 53 0 23 0;
+#X connect 48 0 49 0;
+#X connect 49 0 23 0;
+#X connect 51 0 22 0;
 #X coords 0 -1 1 1 150 90 2 100 100;

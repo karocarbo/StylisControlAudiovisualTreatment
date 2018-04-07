@@ -69,6 +69,7 @@ la position du crayon et qui grossit selon la pression du crayon sur la tablette
 J'ai aussi ajouté un petit système de sélection de couleur pour le cercle. 
 La semaine prochaine consistera à lire davantage sur la librairie gem et j'essayerai de créer des effets visuels plus intéressant.
 
+
 SEMAINE 7
 Ce qui est fait:
 J’ai intégré un synthétiseur monophonique avec quatre oscillateurs qui se contrôle avec la tablette 
@@ -84,3 +85,21 @@ une sphère en mouvement qui se multiplie selon l’intensité de la distorsion 
 Penser à un système visuel qui permettra de contrôler les effets audio de façon clair sans venir interrompre les projections.
 Continuer à intégrer d’autres effets audio.
 Implanter un système d’enregistrement de son et d’exportation de son.
+
+
+SEMAINE 13
+Ajouts et améliorations :
+- J’ai ajouté l’effet delay et flanger.
+- J’ai amélioré l’organisation du projet en général
+- Un visuel est aussi attribué lorsqu’un fichier sonore est joué par l’objet Import Table. (des paramètres visuels sont modifiés lorsqu’on appuie sur play, stop et pause)
+- J’ai fait un visuel temporaire lorsqu’on joue avec le synthétiseur monophonique avec la tablette.
+- Il me reste les contrôles lowshelf du reverb, hightcut et low cut de la distortion à ajouter dans les contrôls de la tablette. Sinon, tous les autres paramètres de tous les effets sont contrôlables avec celle-ci.
+- Le master volume est contrôlable avec la tablette
+- Les objets d’effets audio ont été revisités et améliorés
+
+À faire
+- Attribuer un visuel pour l’effet flanger
+- Régler le problème de «peak» avec l’effet delay. J’ai mis un clip à -1 et 1 pour l’instant, mais il faudrait plutôt un limiter ou une autre façon d’organiser les volumes des délais.
+- Implanter un système d’enregistrement de son et d’exportation de son.
+
+

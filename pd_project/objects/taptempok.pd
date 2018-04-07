@@ -71,7 +71,7 @@
 #X connect 27 0 20 0;
 #X connect 28 0 31 0;
 #X connect 31 0 16 0;
-#X restore 147 44 pd taptempo;
+#X restore 148 223 pd taptempo;
 #X obj 104 122 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X floatatom 104 162 5 0 0 0 - - -, f 5;

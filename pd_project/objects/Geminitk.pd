@@ -1,5 +1,5 @@
-#N canvas 617 23 379 571 10;
-#N canvas 672 297 1091 794 gemwin 0;
+#N canvas 981 174 627 612 10;
+#N canvas 752 311 1091 794 gemwin 0;
 #X obj 230 337 gemwin;
 #X msg 293 142 dimen 500 500;
 #X msg 330 100 dimen 1920 1155;
@@ -55,12 +55,11 @@
 #X obj 951 181 t b b;
 #X obj 946 55 inlet;
 #X obj 997 57 inlet;
-#X msg 402 49 dimen 1600 1190;
 #X floatatom 946 77 5 0 0 0 - - -, f 5;
 #X obj 849 304 metro 500;
 #X msg 286 545 fog 0.15748;
 #X obj 270 414 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2000 1;
+-1 -1 0 1;
 #X obj 267 434 t b f;
 #X msg 304 479 set fog \$1;
 #X text 564 534 fogmode 0/1/2/3 : set the fog mode (OFF/LINEAR/EXP/EXP^2)
@@ -70,6 +69,10 @@
 -1 -1 3;
 #X msg 487 553 set fogmode \$1;
 #X obj 490 530 t b f;
+#X msg 412 43 dimen \$1 \$2;
+#X obj 412 20 inlet;
+#X obj 811 172 t b f;
+#X obj 761 169 t b f;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 1 0;
@@ -120,37 +123,42 @@
 #X connect 45 0 35 0;
 #X connect 46 0 48 0;
 #X connect 47 0 0 0;
-#X connect 48 0 34 0;
-#X connect 48 1 47 0;
-#X connect 48 2 57 0;
+#X connect 48 0 69 0;
+#X connect 48 1 68 0;
+#X connect 48 2 56 0;
 #X connect 48 3 49 0;
-#X connect 49 0 57 0;
+#X connect 49 0 56 0;
 #X connect 50 0 51 0;
 #X connect 51 0 0 0;
-#X connect 52 0 57 0;
+#X connect 52 0 56 0;
 #X connect 52 1 49 0;
-#X connect 53 0 56 0;
-#X connect 53 0 57 1;
+#X connect 53 0 55 0;
+#X connect 53 0 56 1;
 #X connect 54 0 52 0;
-#X connect 55 0 0 0;
-#X connect 57 0 42 0;
-#X connect 57 0 43 0;
-#X connect 57 0 44 0;
-#X connect 58 0 0 0;
-#X connect 59 0 60 0;
-#X connect 60 0 58 0;
-#X connect 60 1 61 0;
-#X connect 61 0 58 0;
-#X connect 63 0 0 0;
-#X connect 64 0 66 0;
-#X connect 65 0 63 0;
-#X connect 66 0 63 0;
-#X connect 66 1 65 0;
+#X connect 56 0 42 0;
+#X connect 56 0 43 0;
+#X connect 56 0 44 0;
+#X connect 57 0 0 0;
+#X connect 58 0 59 0;
+#X connect 59 0 57 0;
+#X connect 59 1 60 0;
+#X connect 60 0 57 0;
+#X connect 62 0 0 0;
+#X connect 63 0 65 0;
+#X connect 64 0 62 0;
+#X connect 65 0 62 0;
+#X connect 65 1 64 0;
+#X connect 66 0 0 0;
+#X connect 67 0 66 0;
+#X connect 68 0 49 0;
+#X connect 68 1 47 0;
+#X connect 69 0 49 0;
+#X connect 69 1 34 0;
 #X restore 116 505 pd gemwin;
 #X obj 116 484 pack f f f;
 #X obj 125 450 t b f;
 #X obj 171 450 t b f;
-#X obj 102 102 cnv 15 146 271 empty empty empty 20 12 0 14 -257983
+#X obj 102 102 cnv 15 146 296 empty empty empty 20 12 0 14 -257983
 -66577 0;
 #X obj 115 125 tgl 15 0 create_destroy empty empty 17 7 0 10 -1 -262144
 -262144 1 1;
@@ -161,27 +169,39 @@
 #X text 132 177 full screen;
 #X text 134 124 open window;
 #X text 132 191 small rect;
-#X obj 115 215 tgl 15 0 light empty empty 17 7 0 10 -1 -262144 -262144
+#X obj 115 243 tgl 15 0 light empty empty 17 7 0 10 -1 -262144 -262144
 1 1;
-#X text 133 214 light on / off;
-#X obj 116 261 vradio 15 1 0 4 bgcolsel empty empty 0 -8 0 10 -1 -262144
--262144 3;
-#X text 134 305 freeze color;
-#X text 135 276 white;
-#X text 135 261 black;
-#X obj 138 336 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -26960
+#X text 133 242 light on / off;
+#X obj 116 291 vradio 15 1 0 4 bgcolsel empty empty 0 -8 0 10 -1 -262144
+-262144 2;
+#X text 134 335 freeze color;
+#X text 135 306 white;
+#X text 135 291 black;
+#X obj 138 360 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -26960
 -204786 -204786 0 0;
-#X obj 160 336 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -14080
+#X obj 160 360 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -14080
 -262144 -262144 0 0;
-#X obj 116 336 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -254797
+#X obj 116 360 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -254797
 -262144 -262144 0 0;
-#X text 134 290 random color;
-#X text 113 242 BACKGROUND COLOR;
+#X text 134 320 random color;
+#X text 113 271 BACKGROUND COLOR;
 #X obj 102 102 cnv 15 146 15 empty empty GEM_INIT 40 9 0 14 -1 -262144
 0;
-#X obj 268 73 inlet;
-#X obj 320 75 inlet;
-#X connect 1 0 0 0;
+#X obj 98 78 inlet;
+#X obj 245 76 inlet;
+#X floatatom 115 210 5 0 0 0 - - -, f 5;
+#X floatatom 164 210 5 0 0 0 - - -, f 5;
+#X obj 14 427 pack f f;
+#X text 112 223 custom;
+#X text 153 208 x;
+#X obj 301 220 loadbang;
+#X obj 360 458 r delayonoff;
+#X floatatom 360 480 5 0 0 0 - - -, f 5;
+#X obj 360 502 sel 0 1;
+#X msg 391 523 2;
+#X msg 360 523 0;
+#X text 276 438 sélection du background avec l'effet delay;
+#X connect 1 0 0 1;
 #X connect 2 0 1 0;
 #X connect 2 1 1 1;
 #X connect 3 0 1 0;
@@ -189,6 +209,16 @@
 #X connect 18 0 2 0;
 #X connect 19 0 3 0;
 #X connect 20 0 1 0;
-#X connect 24 0 0 1;
-#X connect 25 0 0 2;
-#X coords 0 -1 1 1 150 275 2 100 100;
+#X connect 24 0 0 2;
+#X connect 25 0 0 3;
+#X connect 26 0 28 0;
+#X connect 27 0 28 1;
+#X connect 28 0 0 0;
+#X connect 31 0 12 0;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 34 0 36 0;
+#X connect 34 1 35 0;
+#X connect 35 0 14 0;
+#X connect 36 0 14 0;
+#X coords 0 -1 1 1 150 300 2 100 100;

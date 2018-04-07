@@ -1,0 +1,28 @@
+#N canvas 599 432 237 321 10;
+#X obj 41 40 inlet;
+#X obj 72 214 line~;
+#X msg 85 183 0 1000;
+#X msg 41 81 1;
+#X obj 23 251 *~;
+#X obj 85 161 delay;
+#X obj 85 139 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 156 144 sustain;
+#X text 114 80 attack;
+#X text 135 184 release;
+#X msg 72 81 1 200;
+#X obj 23 277 outlet~;
+#X msg 117 139 100;
+#X obj 117 113 lbang;
+#X connect 0 0 3 0;
+#X connect 0 0 10 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 1;
+#X connect 4 0 11 0;
+#X connect 5 0 2 0;
+#X connect 6 0 5 0;
+#X connect 10 0 1 0;
+#X connect 10 0 6 0;
+#X connect 12 0 5 1;
+#X connect 13 0 12 0;
