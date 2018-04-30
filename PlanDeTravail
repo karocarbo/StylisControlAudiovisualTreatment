@@ -93,13 +93,10 @@ Ajouts et améliorations :
 - J’ai amélioré l’organisation du projet en général
 - Un visuel est aussi attribué lorsqu’un fichier sonore est joué par l’objet Import Table. (des paramètres visuels sont modifiés lorsqu’on appuie sur play, stop et pause)
 - J’ai fait un visuel temporaire lorsqu’on joue avec le synthétiseur monophonique avec la tablette.
-- Il me reste les contrôles lowshelf du reverb, hightcut et low cut de la distortion à ajouter dans les contrôls de la tablette. Sinon, tous les autres paramètres de tous les effets sont contrôlables avec celle-ci.
+- Il me reste les contrôles lowshelf du reverb, hightcut et low cut de la distortion à ajouter dans les contrôles de la tablette. Sinon, tous les autres paramètres de tous les effets sont contrôlables avec celle-ci.
 - Le master volume est contrôlable avec la tablette
 - Les objets d’effets audio ont été revisités et améliorés
 
 À faire
 - Attribuer un visuel pour l’effet flanger
 - Régler le problème de «peak» avec l’effet delay. J’ai mis un clip à -1 et 1 pour l’instant, mais il faudrait plutôt un limiter ou une autre façon d’organiser les volumes des délais.
-- Implanter un système d’enregistrement de son et d’exportation de son.
-
-

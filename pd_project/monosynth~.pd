@@ -1,4 +1,4 @@
-#N canvas 584 186 1046 893 10;
+#N canvas 602 164 1046 893 10;
 #X msg 450 525 \$1 25;
 #X obj 450 547 line~;
 #X obj 450 483 r master_volume;
@@ -18,29 +18,29 @@
 #X obj 111 154 hsl 128 15 18000 100 1 0 cutoff cutoff_init Cutoff 50
 8 0 10 -219072 -1 -262144 0 1;
 #X obj 108 239 tgl 15 0 sel0 sine_on empty 25 8 0 10 -214976 -262144
--1 0 1;
+-1 1 1;
 #X obj 262 278 hsl 128 15 0 5 0 0 amount_triangle empty LFO_Amount
 40 8 0 10 -262144 -1 -214976 0 1;
 #X obj 262 297 hsl 128 15 0.2 20 1 0 speed_triangle empty LFO_Speed
 40 8 0 10 -262144 -1 -214976 0 1;
 #X obj 111 277 hsl 128 15 0 2 0 0 amount_sine empty LFO_Amount 40 8
-0 10 -262144 -1 -219072 0 1;
+0 10 -262144 -1 -219072 12700 1;
 #X obj 111 296 hsl 128 15 0.2 20 1 0 speed_sine empty LFO_Speed 40
-8 0 10 -262144 -1 -219072 0 1;
+8 0 10 -262144 -1 -219072 12700 1;
 #X obj 259 348 tgl 15 0 sel1 empty empty 25 8 0 10 -219072 -262144
--262144 0 1;
+-262144 1 1;
 #X obj 259 240 tgl 15 0 sel3 empty empty 25 8 0 10 -219072 -262144
 -1 1 1;
 #X text 279 347 SQUARE;
 #X text 130 346 SAWTOOTH;
 #X obj 262 386 hsl 128 15 0 5 0 0 amount_square empty LFO_Amount 40
-8 0 10 -262144 -1 -219072 0 1;
+8 0 10 -262144 -1 -219072 7200 1;
 #X obj 262 405 hsl 128 15 0.2 20 1 0 speed_square empty LFO_Speed 40
-8 0 10 -262144 -1 -214976 0 1;
+8 0 10 -262144 -1 -214976 5600 1;
 #X obj 111 386 hsl 128 15 0 5 0 0 amount_triangle empty Amount 50 8
-0 10 -262144 -1 -214976 0 1;
+0 10 -262144 -1 -214976 5900 1;
 #X obj 111 405 hsl 128 15 0.2 20 1 0 speed_triangle empty Speed 50
-8 0 10 -262144 -1 -214976 0 1;
+8 0 10 -262144 -1 -214976 4100 1;
 #X obj 109 347 tgl 15 0 sel2 empty empty -30 8 0 10 -214976 -262144
 -262144 1 1;
 #X obj 262 259 hsl 128 15 0 1 0 0 trianglevol init_triangle Volume
@@ -49,7 +49,7 @@
 #X obj 111 258 hsl 128 15 0 1 0 0 sinevol init_sine Volume 50 8 0 10
 -219072 -1 -262144 12700 0;
 #X obj 111 135 hsl 128 15 0 1 0 0 master_volume empty Master_Volume
-35 8 0 10 -262144 -1 -219072 0 0;
+35 8 0 10 -262144 -1 -219072 6350 0;
 #X obj 177 102 cnv 15 100 20 empty empty MONOPHONIC_SYNTH 0 12 0 14
 -257983 -99865 0;
 #X obj 111 367 hsl 128 15 0 1 0 0 trianglevol init_triangle Volume
@@ -57,11 +57,11 @@
 #X obj 262 367 hsl 128 15 0 1 0 0 squarevol init_square Volume 50 8
 0 10 -214976 -1 -262144 12700 0;
 #X obj 108 424 hradio 14 1 0 5 oct_sawtooth oct_init Octave 80 8 0
-10 -262144 -214976 -1 4;
+10 -262144 -214976 -1 3;
 #X obj 108 317 hradio 14 1 0 5 oct_sine oct_init Octave 80 8 0 10 -262144
--219072 -1 2;
+-219072 -1 1;
 #X obj 259 425 hradio 14 1 0 5 oct_square oct_init Octave 80 8 0 10
--262144 -214976 -1 2;
+-262144 -214976 -1 0;
 #X obj 259 317 hradio 14 1 0 5 oct_triangle oct_init Octave 80 8 0
 10 -262144 -214976 -1 2;
 #X text 279 240 TRIANGLE;
@@ -152,7 +152,7 @@
 #X connect 18 0 17 0;
 #X connect 21 0 20 0;
 #X restore 444 235 pd oct_switch_master;
-#N canvas 1141 23 750 744 sine 0;
+#N canvas 918 240 750 744 sine 0;
 #X obj 17 18 inlet;
 #X obj 18 684 outlet~;
 #X obj 517 41 loadbang;
@@ -759,6 +759,7 @@ du contrôle de l'amount du Lfo (j'ai fait ça à l'oreille);
 #X floatatom 444 120 5 0 0 0 - - -, f 5;
 #X obj 54 45 r penbut2;
 #X obj 54 67 * 0.5;
+#X text 492 397 comment;
 #X connect 0 0 1 0;
 #X connect 1 0 3 1;
 #X connect 2 0 6 0;

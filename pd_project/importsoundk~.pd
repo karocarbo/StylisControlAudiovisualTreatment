@@ -47,12 +47,12 @@
 #X obj 111 210 hsl 128 15 0 1 0 0 empty empty Left_Limit 30 8 0 10
 -254797 -1 -262144 0 1;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array channel1 4e+06 float 2;
-#X coords 0 1 4e+06 -1 130 70 1 0 0;
+#X array channel1 1.17747e+07 float 2;
+#X coords 0 1 1.17747e+07 -1 130 70 1 0 0;
 #X restore 109 372 graph;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array channel0 4e+06 float 2;
-#X coords 0 1 4e+06 -1 130 70 2 0 0;
+#X array channel0 1.17747e+07 float 2;
+#X coords 0 1 1.17747e+07 -1 130 70 2 0 0;
 #X restore 109 285 graph;
 #X obj 108 166 bng 15 250 50 0 empty empty Pause 17 7 0 10 -254797
 -262144 -1;
@@ -81,11 +81,12 @@
 #X obj 28 223 s play;
 #X msg 55 195 2;
 #X obj 9 109 loadbang;
+#X text 96 618 read sf;
 #X connect 0 0 1 0;
 #X connect 0 1 3 0;
 #X connect 1 0 4 0;
 #X connect 1 0 6 1;
-#X connect 2 0 53 0;
+#X connect 2 0 38 0;
 #X connect 3 0 4 1;
 #X connect 4 0 32 1;
 #X connect 4 0 35 0;

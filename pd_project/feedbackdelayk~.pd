@@ -1,10 +1,10 @@
-#N canvas 177 559 918 594 10;
+#N canvas 749 23 918 594 10;
 #N canvas 48 38 759 1031 delay 0;
 #X obj 96 181 delay~ 22050 22050;
 #X obj 314 142 hsl 128 15 0 22050 0 0 empty empty Time 40 8 0 10 -262144
--1 -1 4904 1;
+-1 -1 6103 1;
 #X obj 397 312 hsl 128 15 0 1 0 0 empty empty Wet_Vol 40 8 0 10 -262144
--1 -1 0 1;
+-1 -1 7300 1;
 #X obj 106 224 delay~ 22050 22050;
 #X obj 116 270 delay~ 22050 22050;
 #X obj 126 316 delay~ 22050 22050;
@@ -128,26 +128,26 @@
 #X obj 102 102 cnv 15 146 166 empty empty DELAY 50 12 0 14 -257983
 -99865 0;
 #X obj 112 156 hsl 128 15 10 22050 0 0 empty empty Speed_L 40 8 0 10
--253011 -1 -262144 4900 1;
+-253011 -1 -262144 6100 1;
 #X obj 112 217 hsl 128 15 0 1 0 0 empty empty Length_L 40 8 0 10 -253011
--1 -262144 0 1;
+-1 -262144 7300 1;
 #X obj 112 235 hsl 128 15 0 1 0 0 empty empty Length_R 40 8 0 10 -253011
--1 -262144 0 1;
+-1 -262144 7300 1;
 #X obj 112 174 hsl 128 15 10 22050 0 0 empty empty Speed_R 40 8 0 10
--253011 -1 -262144 4900 1;
+-253011 -1 -262144 6100 1;
 #X obj 112 199 hsl 128 15 0 1 0 0 empty empty Length 40 8 0 10 -262144
--1 -253011 0 1;
+-1 -253011 7300 1;
 #X obj 112 138 hsl 128 15 10 22050 0 0 empty empty Speed 40 8 0 10
--262144 -1 -253011 4900 1;
+-262144 -1 -253011 6100 1;
 #X obj 227 108 tgl 15 0 empty empty empty 17 7 0 10 -253011 -262144
 -1 0 1;
 #X obj 696 490 +~;
 #N canvas 48 38 759 1031 delay 0;
 #X obj 96 181 delay~ 22050 22050;
 #X obj 314 142 hsl 128 15 0 22050 0 0 empty empty Time 40 8 0 10 -262144
--1 -1 4904 1;
+-1 -1 6103 1;
 #X obj 397 312 hsl 128 15 0 1 0 0 empty empty Wet_Vol 40 8 0 10 -262144
--1 -1 0 1;
+-1 -1 7300 1;
 #X obj 106 224 delay~ 22050 22050;
 #X obj 116 270 delay~ 22050 22050;
 #X obj 126 316 delay~ 22050 22050;
@@ -267,9 +267,9 @@
 #N canvas 48 38 759 1031 delay 0;
 #X obj 96 181 delay~ 22050 22050;
 #X obj 314 142 hsl 128 15 0 22050 0 0 empty empty Time 40 8 0 10 -262144
--1 -1 4904 1;
+-1 -1 6103 1;
 #X obj 397 312 hsl 128 15 0 1 0 0 empty empty Wet_Vol 40 8 0 10 -262144
--1 -1 0 1;
+-1 -1 7300 1;
 #X obj 106 224 delay~ 22050 22050;
 #X obj 116 270 delay~ 22050 22050;
 #X obj 126 316 delay~ 22050 22050;
@@ -389,9 +389,9 @@
 #N canvas 48 38 759 1031 delay 0;
 #X obj 96 181 delay~ 22050 22050;
 #X obj 314 142 hsl 128 15 0 22050 0 0 empty empty Time 40 8 0 10 -262144
--1 -1 4904 1;
+-1 -1 6103 1;
 #X obj 397 312 hsl 128 15 0 1 0 0 empty empty Wet_Vol 40 8 0 10 -262144
--1 -1 0 1;
+-1 -1 7300 1;
 #X obj 106 224 delay~ 22050 22050;
 #X obj 116 270 delay~ 22050 22050;
 #X obj 126 316 delay~ 22050 22050;
@@ -511,9 +511,9 @@
 #N canvas 48 38 759 1031 delay 0;
 #X obj 96 181 delay~ 22050 22050;
 #X obj 314 142 hsl 128 15 0 22050 0 0 empty empty Time 40 8 0 10 -262144
--1 -1 4904 1;
+-1 -1 6103 1;
 #X obj 397 312 hsl 128 15 0 1 0 0 empty empty Wet_Vol 40 8 0 10 -262144
--1 -1 0 1;
+-1 -1 7300 1;
 #X obj 106 224 delay~ 22050 22050;
 #X obj 116 270 delay~ 22050 22050;
 #X obj 126 316 delay~ 22050 22050;
@@ -633,9 +633,9 @@
 #N canvas 48 38 759 1031 delay 0;
 #X obj 96 181 delay~ 22050 22050;
 #X obj 314 142 hsl 128 15 0 22050 0 0 empty empty Time 40 8 0 10 -262144
--1 -1 4904 1;
+-1 -1 6103 1;
 #X obj 397 312 hsl 128 15 0 1 0 0 empty empty Wet_Vol 40 8 0 10 -262144
--1 -1 0 1;
+-1 -1 7300 1;
 #X obj 106 224 delay~ 22050 22050;
 #X obj 116 270 delay~ 22050 22050;
 #X obj 126 316 delay~ 22050 22050;
@@ -782,6 +782,7 @@
 #X obj 14 163 / 44.1;
 #X text 53 184 ms;
 #X obj 14 207 s delay_ms;
+#X obj 258 100 s delayonoff_visual;
 #X connect 0 0 34 0;
 #X connect 0 1 14 0;
 #X connect 1 0 13 0;
@@ -819,6 +820,7 @@
 #X connect 11 0 46 0;
 #X connect 12 0 33 1;
 #X connect 12 0 34 1;
+#X connect 12 0 49 0;
 #X connect 13 0 3 0;
 #X connect 14 0 34 0;
 #X connect 14 1 15 0;

@@ -1,5 +1,5 @@
-#N canvas 981 174 627 612 10;
-#N canvas 752 311 1091 794 gemwin 0;
+#N canvas 932 73 742 612 10;
+#N canvas 659 113 1091 794 gemwin 0;
 #X obj 230 337 gemwin;
 #X msg 293 142 dimen 500 500;
 #X msg 330 100 dimen 1920 1155;
@@ -73,6 +73,7 @@
 #X obj 412 20 inlet;
 #X obj 811 172 t b f;
 #X obj 761 169 t b f;
+#X obj 342 177 r \$0-gemwin-in;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 1 0;
@@ -154,53 +155,66 @@
 #X connect 68 1 47 0;
 #X connect 69 0 49 0;
 #X connect 69 1 34 0;
+#X connect 70 0 0 0;
 #X restore 116 505 pd gemwin;
 #X obj 116 484 pack f f f;
 #X obj 125 450 t b f;
 #X obj 171 450 t b f;
-#X obj 102 102 cnv 15 146 296 empty empty empty 20 12 0 14 -257983
+#X obj 103 102 cnv 15 146 316 empty empty empty 20 12 0 14 -257983
 -66577 0;
-#X obj 115 125 tgl 15 0 create_destroy empty empty 17 7 0 10 -1 -262144
+#X obj 109 125 tgl 15 0 create_destroy empty empty 17 7 0 10 -1 -262144
 -262144 1 1;
-#X text 132 145 small window;
-#X text 132 161 large window;
-#X obj 115 146 vradio 15 1 0 4 dimen empty empty 0 -8 0 10 -1 -262144
+#X text 126 145 small window;
+#X text 126 161 large window;
+#X obj 109 146 vradio 15 1 0 4 dimen empty empty 0 -8 0 10 -1 -262144
 -262144 0;
-#X text 132 177 full screen;
-#X text 134 124 open window;
-#X text 132 191 small rect;
-#X obj 115 243 tgl 15 0 light empty empty 17 7 0 10 -1 -262144 -262144
+#X text 126 177 full screen;
+#X text 128 124 open window;
+#X text 126 191 small rect;
+#X obj 109 271 tgl 15 0 light empty empty 17 7 0 10 -1 -262144 -262144
 1 1;
-#X text 133 242 light on / off;
-#X obj 116 291 vradio 15 1 0 4 bgcolsel empty empty 0 -8 0 10 -1 -262144
--262144 2;
-#X text 134 335 freeze color;
-#X text 135 306 white;
-#X text 135 291 black;
-#X obj 138 360 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -26960
+#X text 127 270 light on / off;
+#X obj 110 311 vradio 15 1 0 4 bgcolsel empty empty 0 -8 0 10 -1 -262144
+-262144 0;
+#X text 128 355 freeze color;
+#X text 129 326 white;
+#X text 129 311 black;
+#X obj 132 380 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -26960
 -204786 -204786 0 0;
-#X obj 160 360 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -14080
+#X obj 154 380 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -14080
 -262144 -262144 0 0;
-#X obj 116 360 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -254797
+#X obj 110 380 vsl 15 30 0 1 0 0 empty empty empty 0 -9 0 10 -254797
 -262144 -262144 0 0;
-#X text 134 320 random color;
-#X text 113 271 BACKGROUND COLOR;
-#X obj 102 102 cnv 15 146 15 empty empty GEM_INIT 40 9 0 14 -1 -262144
+#X text 128 340 random color;
+#X text 107 291 BACKGROUND COLOR;
+#X obj 103 102 cnv 15 146 15 empty empty GEM_INIT 40 9 0 14 -1 -262144
 0;
 #X obj 98 78 inlet;
 #X obj 245 76 inlet;
-#X floatatom 115 210 5 0 0 0 - - -, f 5;
-#X floatatom 164 210 5 0 0 0 - - -, f 5;
+#X floatatom 109 210 5 0 0 0 - - -, f 5;
+#X floatatom 158 210 5 0 0 0 - - -, f 5;
 #X obj 14 427 pack f f;
-#X text 112 223 custom;
-#X text 153 208 x;
+#X text 195 209 custom;
+#X text 147 208 x;
 #X obj 301 220 loadbang;
-#X obj 360 458 r delayonoff;
 #X floatatom 360 480 5 0 0 0 - - -, f 5;
 #X obj 360 502 sel 0 1;
 #X msg 391 523 2;
 #X msg 360 523 0;
 #X text 276 438 sélection du background avec l'effet delay;
+#X obj 361 459 r delayonoff_visual;
+#X msg 300 100 0;
+#X msg 331 100 2;
+#X msg 360 100 4;
+#X text 452 98 <-- destroy gemwin between clicking these;
+#X obj 342 177 s \$0-gemwin-in;
+#X msg 421 100 8;
+#X msg 391 100 5;
+#X msg 342 150 destroy \, FSAA \$1 \, create \, 1;
+#X obj 308 52 sel 0 1 2 3 4;
+#X obj 109 245 hradio 15 1 0 5 empty empty -_______+ 1 8 0 13 -262144
+-1 -1 0;
+#X text 107 232 Choose defenition;
 #X connect 1 0 0 1;
 #X connect 2 0 1 0;
 #X connect 2 1 1 1;
@@ -216,9 +230,21 @@
 #X connect 28 0 0 0;
 #X connect 31 0 12 0;
 #X connect 32 0 33 0;
-#X connect 33 0 34 0;
-#X connect 34 0 36 0;
-#X connect 34 1 35 0;
+#X connect 33 0 35 0;
+#X connect 33 1 34 0;
+#X connect 34 0 14 0;
 #X connect 35 0 14 0;
-#X connect 36 0 14 0;
-#X coords 0 -1 1 1 150 300 2 100 100;
+#X connect 37 0 32 0;
+#X connect 38 0 45 0;
+#X connect 39 0 45 0;
+#X connect 40 0 45 0;
+#X connect 43 0 45 0;
+#X connect 44 0 45 0;
+#X connect 45 0 42 0;
+#X connect 46 0 38 0;
+#X connect 46 1 39 0;
+#X connect 46 2 40 0;
+#X connect 46 3 44 0;
+#X connect 46 4 43 0;
+#X connect 47 0 46 0;
+#X coords 0 -1 1 1 150 320 2 100 100;
